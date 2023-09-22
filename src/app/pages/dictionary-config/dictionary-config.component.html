@@ -1,0 +1,43 @@
+<section id="dictionary-config" class="column" *ngIf="dictionary$ | async as dictionary">
+  <div class="page-title--container column text-primary">
+    <small>Dicionário /</small>
+    <span class="page-title text-primary">{{ dictionary.Nome }}</span>
+  </div>
+  <letter-filter [selected]="lettersSelected" (onSelect)="filterWordsByLetter($event)"></letter-filter>
+
+  <div class="card-table" *ngIf="words$ | async as words">
+    <div class="card-table-header">
+      <button type="button" mat-raised-button cdkFocusInitial color="primary"
+        (click)="openDialog('create', { dictionaryId: dictionaryID })">Adicionar</button>
+    </div>
+
+    <table class="card-table-body">
+      <tbody *ngIf="words.length !== 0; else withoutWord">
+        <tr *ngFor="let word of words">
+          <td>{{ word.Texto }}</td>
+
+          <td>
+            <div class="icon-lg-container squad center" data-icon-toast="Configurar"
+              (click)="openDialog('update', { word: word })">
+              <i class="fas fa-pen"></i>
+            </div>
+          </td>
+          <td>
+            <div class="icon-lg-container squad center" data-icon-toast="Excluir"
+              (click)="openDialog('delete', { word: word })">
+              <i class="fas fa-times"></i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <ng-template #withoutWord>
+        <tbody>
+          <tr>
+            <td colspan="3">Nenhuma Palavra cadastrada</td>
+          </tr>
+        </tbody>
+      </ng-template>
+
+    </table>
+  </div>
+</section>

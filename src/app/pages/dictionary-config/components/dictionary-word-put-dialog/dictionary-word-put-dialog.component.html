@@ -1,0 +1,25 @@
+<form [formGroup]="form" id="dialog-put" class="column">
+  <h1>{{ isEdit ? 'Editar ' : 'Criar ' }} palavra </h1>
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Texto</mat-label>
+    <input matInput maxlength="200" #textInput formControlName="Texto" required>
+    <mat-hint align="end"><small>{{textInput.value?.length || 0}}/200</small></mat-hint>
+  </mat-form-field>
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Definição</mat-label>
+    <input matInput maxlength="1000" #definicaoInput formControlName="Definicao" required>
+    <mat-hint align="end"><small>{{definicaoInput.value?.length || 0}}/1000</small></mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Definição Extra</mat-label>
+    <textarea matInput placeholder="Escreva a definição" formControlName="Definicao_Extra"></textarea>
+  </mat-form-field>
+
+  <div class="dialog-buttons">
+    <button type="button" (click)="onCloseDialog()" mat-button cdkFocusInitial>Cancelar</button>
+    <button type="submit" [disabled]="!form.valid" (click)="onSubmit()" mat-raised-button color="primary">{{ isEdit ?
+      'Salvar ' : 'Criar' }}
+    </button>
+  </div>
+</form>

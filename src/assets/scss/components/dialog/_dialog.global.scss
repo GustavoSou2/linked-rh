@@ -1,0 +1,15 @@
+.delete-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .delete-dialog-content {
+    font-size: 1.05rem;
+  }
+
+  .delete-dialog-group-button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}

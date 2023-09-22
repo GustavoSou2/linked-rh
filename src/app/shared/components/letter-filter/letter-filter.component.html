@@ -1,0 +1,14 @@
+<div id="letter-filter">
+  <label for="letter-filter-item--field-all" class="letter-filter-item--container center"
+    [ngClass]="{ 'selected': 'all' == lettersSelected }">
+    <span class="letter-filter-item-description--container">Todos</span>
+    <input [type]="'radio'" class="d-none" #inputall name="letter" id="letter-filter-item--field-all" value="all"
+      (change)="onChange('all')">
+  </label>
+  <label [for]="'letter-filter-item--field-'+letter" class="letter-filter-item--container center"
+    [ngClass]="{ 'selected': letter === lettersSelected }" *ngFor="let letter of letters">
+    <span class="letter-filter-item-description--container">{{ letter }}</span>
+    <input [type]="'radio'" class="d-none" [name]="'letter'" [id]="'letter-filter-item--field-'+letter" [value]="letter"
+      (change)="onChange(letter)">
+  </label>
+</div>

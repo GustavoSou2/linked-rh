@@ -1,0 +1,82 @@
+@each $key, $color in $colorsPallet {
+  .text-#{$key} {
+    color: $color !important;
+  }
+}
+
+@each $key, $color in $colorsPallet {
+  .bg-#{$key} {
+    background-color: $color !important;
+  }
+}
+
+@each $key, $color in $colorsPallet {
+  .button-#{$key} {
+    background-color: $color !important;
+
+    @if ($key =='primary' or $key =='secondary') {
+      color: $white;
+    }
+
+    @else {
+      color: #000;
+    }
+
+    &:hover {
+      background-color: #{$color}90 !important;
+    }
+  }
+}
+
+@each $key, $size in $iconContainerSizes {
+  .icon-#{$key}-container {
+    width: $size;
+    height: $size;
+    color: $stronggrey;
+    background-color: 1px solid #{$lightgrey}90 !important;
+    transition: 300ms ease-in;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: attr(data-icon-toast);
+      width: 0px;
+      height: 0;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1px;
+      transition: 300ms;
+      background-color: $lightgrey;
+      z-index: 1;
+    }
+
+    &:hover {
+      background-color: $lightgrey;
+
+      &::before {
+        width: max-content;
+        height: max-content;
+        font-size: 1rem;
+        padding: 0.35rem 0.75rem;
+        opacity: 1;
+        z-index: 3;
+        top: 50%;
+        transform: translate(-130%, -50%);
+      }
+    }
+
+
+  }
+}
+
+@mixin display-flex {
+  display: flex;
+}

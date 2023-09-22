@@ -1,0 +1,53 @@
+<section id="dictionary" class="column">
+  <div class="page-title--container">
+    <span class="page-title text-primary">Dicionário</span>
+  </div>
+  <div class="dictionary-table--container">
+    <div class="dictionary-table--search-container">
+      <label for="search" class="dictionary-table--search">
+        <input type="text" id="search" placeholder="Pesquisar" [(ngModel)]="search"
+          (ngModelChange)="filterDictionaries($event)" />
+        <i class="fas fa-search center"></i>
+      </label>
+
+      <button class="button button-primary" (click)="openDialog('create')">
+        <i class="fas fa-plus"></i>
+        Adicionar
+      </button>
+    </div>
+
+    <table class="dictionary-table">
+      <tbody>
+        <tr *ngFor="let dictionary of dictionaries$ | async">
+          <td>{{ dictionary.Nome }}</td>
+          <td>
+            <div class="icon-lg-container squad center" data-icon-toast="Visualizar">
+              <i class="fas fa-search"></i>
+            </div>
+          </td>
+          <td>
+            <div class="icon-lg-container squad center" data-icon-toast="Palavras" (click)="goToWords(dictionary)">
+              <span class="fa-abc-custom">abc</span>
+            </div>
+          </td>
+          <td>
+            <div class="icon-lg-container squad center" data-icon-toast="Configurar"
+              (click)="openDialog('update', dictionary)">
+              <i class="fas fa-cog"></i>
+            </div>
+          </td>
+          <td>
+            <div class="icon-lg-container squad center" data-icon-toast="Excluir"
+              (click)="openDialog('delete', dictionary)">
+              <i class="fas fa-times"></i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<ng-template #name>
+  open_in_browser
+</ng-template>

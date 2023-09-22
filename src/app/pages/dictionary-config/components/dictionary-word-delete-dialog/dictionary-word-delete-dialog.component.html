@@ -1,0 +1,12 @@
+<section class="delete-dialog">
+  <div class="column delete-dialog-content">
+    <span>Deseja excluir Dicionário Geral?</span>
+    <span>Dicionário: <b>{{ word.Texto }} </b></span>
+    <hr />
+    <p>Definição: <b>{{ word.Definicao }} </b></p>
+  </div>
+  <div class="delete-dialog-group-button">
+    <button type="button" (click)="onCloseDialog()" mat-button cdkFocusInitial>Cancelar</button>
+    <button type="submit" mat-raised-button (click)="onDelete()" color="warn">Deletar</button>
+  </div>
+</section>

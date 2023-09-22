@@ -1,0 +1,21 @@
+$primary: #3867d6;
+$secondary: #20bf6b;
+$white: #ffffff;
+$grey: #d9d9d9;
+$lightgrey: #eeeeee;
+$stronggrey: #8e8e8e;
+
+$colorsPallet: (
+  primary: $primary,
+  secondary: $secondary,
+  white: $white,
+  grey: $grey,
+  lightgrey: $lightgrey
+);
+
+$iconContainerSizes: (
+  sm: 30px,
+  md: 35px,
+  lg: 40px,
+  xl: 45px,
+);

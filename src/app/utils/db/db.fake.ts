@@ -1,0 +1,103 @@
+import { IDictionary } from '../interfaces/dictionary.interface';
+import { IWord } from '../interfaces/word.interface';
+
+export const dictionaries: IDictionary[] = [
+  {
+    Nome: 'Dicionario 1',
+    Codigo: 1,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Teste',
+    Codigo: 2,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Dicionarios 3',
+    Codigo: 4,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Dict',
+    Codigo: 3,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Linked RH',
+    Codigo: 5,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Dicionario 2',
+    Codigo: 6,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Dicionario 3',
+    Codigo: 7,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: '444',
+    Codigo: 8,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: '5445',
+    Codigo: 9,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: '6656',
+    Codigo: 10,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: '99999',
+    Codigo: 11,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+  {
+    Nome: 'Teste 4535',
+    Codigo: 12,
+    Cor_Botao: '#3970ff',
+    Cor_Botao_Font: '#000',
+    Cor_Icone: '#3970ff',
+    Cor_Titulo: '#3970ff',
+  },
+];
+
+export const words: IWord[] = [];

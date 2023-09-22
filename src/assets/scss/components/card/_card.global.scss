@@ -1,0 +1,40 @@
+.card-table {
+  width: 100%;
+  border: 1px solid $grey;
+  border-radius: 8px;
+  background-color: $white;
+  overflow: hidden;
+
+  .card-table-header {
+    background-color: #eeeeee;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  table.card-table-body {
+    width: 100%;
+    border-spacing: 0;
+
+    tbody tr {
+      &:nth-child(even) {
+        background-color: #{$lightgrey}90;
+      }
+
+      td {
+        border-bottom: 1px solid $lightgrey;
+        padding: 0.55rem 1.2rem;
+
+        &:nth-child(2) {
+          width: 10%;
+        }
+
+        &:not(:first-child, :nth-child(2)) {
+          width: 5%;
+        }
+      }
+    }
+  }
+
+}

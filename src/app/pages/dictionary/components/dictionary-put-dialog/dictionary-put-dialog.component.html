@@ -1,0 +1,19 @@
+<form [formGroup]="form" id="dialog-put">
+  <h1>{{ isEdit ? 'Editar ' : 'Criar ' }} dicionário </h1>
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>First name</mat-label>
+    <input matInput formControlName="Nome" required>
+  </mat-form-field>
+  <ng-container *ngFor="let field of DialogFieldsArr">
+    <div class="field-color">
+      <input type="color" [formControlName]="field.formControlName" [id]="field.name" [name]="field.name" matInput>
+      <label [for]="field.name">{{ field.label }}</label>
+    </div>
+  </ng-container>
+  <div class="dialog-buttons">
+    <button type="button" (click)="onCloseDialog()" mat-button cdkFocusInitial>Cancelar</button>
+    <button type="submit" [disabled]="!form.valid" (click)="onSubmit()" mat-raised-button color="primary">{{ isEdit ?
+      'Salvar ' : 'Criar' }}
+    </button>
+  </div>
+</form>

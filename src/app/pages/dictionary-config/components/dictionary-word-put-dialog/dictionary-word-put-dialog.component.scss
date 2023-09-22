@@ -1,0 +1,10 @@
+#dialog-put {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  textarea {
+    height: 120px;
+  }
+}

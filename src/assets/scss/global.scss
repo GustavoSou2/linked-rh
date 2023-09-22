@@ -1,0 +1,55 @@
+@import "./variables.global";
+@import "./mixins.global.scss";
+
+@import "./components/button/button.global";
+@import "./components/card/card.global";
+@import "./components/dialog/dialog.global";
+
+.column {
+  @include display-flex;
+
+  flex-direction: column;
+}
+
+.row {
+  @include display-flex;
+
+  flex-direction: row;
+}
+
+.center {
+  @include display-flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.squad {
+  border-radius: 12px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.d-none {
+  display: none;
+}
+
+.page-title--container {
+  gap: 7px;
+
+  small {
+    color: $stronggrey;
+
+    .fa-chevron-right {
+      width: 0.5rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  .page-title {
+    font-size: 2rem !important;
+    text-transform: uppercase;
+  }
+}
